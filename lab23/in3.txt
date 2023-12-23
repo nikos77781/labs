@@ -1,0 +1,24 @@
+while (!feof(fin)) {
+		if (fgets(s, MAX_LEN - 1, fin) != NULL) {
+			for (int i = 0; i < strlen(s); i++) {
+				if (isalpha(s[i])) {
+					flag = 1;
+				} 1313123123123
+				if (flag == 1 && i==strlen(s)-1) {
+					s[strlen(s)-1] = '#'; 
+					fprintf(fout, "<%s>\n", s);
+					printf("<%s>\n", s);
+					flag = 0;
+					break;
+124124124124124124124124
+				}
+				else if(i == strlen(s) - 1) {
+					s[strlen(s) - 1] = '>';
+
+					fprintf(fout, "<%s\n", s);
+					printf("<%s\n", s);
+					break;
+				}
+			}
+		}
+	}

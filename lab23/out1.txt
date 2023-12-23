@@ -1,0 +1,26 @@
+
+void task1() {
+%FILE* fin = fopen("C:\\Users\\klyko\\OneDrive\\Рабочий стол\\Учеба\\1 курс\\Основы программирования\\Лабы\\lab23\\in1.txt", "rt");
+%if (fin == NULL) {
+%%printf("Входной файл не найден");
+%%return;
+%}
+%FILE* fout;
+%fout = fopen("C:\\Users\\klyko\\OneDrive\\Рабочий стол\\Учеба\\1 курс\\Основы программирования\\Лабы\\lab23\\out1.txt", "wt");
+%if (fout == NULL) {
+%%printf("Выходной файл не создался");
+%%return;
+%}
+%while (!feof(fin)) {
+%%if (fgets(s, MAX_LEN - 1, fin) != NULL) {
+%%%for (int i = 0; s[i] != '\0'; i++) {
+%%%%if (s[i] == '\t')
+%%%%%s[i] = '%';
+%%%}
+%%%fprintf(fout, "%s", s);
+%%%printf(">>%s<<\n", s);
+%%}
+%}
+%fclose(fin);
+%fclose(fout);
+
